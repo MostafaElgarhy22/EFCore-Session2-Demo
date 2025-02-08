@@ -9,6 +9,14 @@ namespace EFCore_Session2_Demo
 {
     internal class CompanyDbContext : DbContext
     {
+
+        public CompanyDbContext() : base()
+        {
+
+        }
+
+
+
         public DbSet<Employee> Employees { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,7 +37,7 @@ namespace EFCore_Session2_Demo
 
     internal class DbContext
     {
-        protected virtual void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
+
         protected virtual void OnModelCreating(ModelBuilder modelBuilder) { }
     }
 }
